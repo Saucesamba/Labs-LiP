@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS6 Bootstrap</title>
+    <link href="http://e-learning.bmstu.ru/moodle/pluginfile.php/754
+6/mod_folder/content/0/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            margin-bottom: 40px;
+        }
+
+        main {
+            margin-top: 15px;
+        }
+
+        footer {
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .my-primary {
+            background-color: #54e48b;
+            color: rgb(0, 0, 0);
+        }
+        B{
+            background-color:darksalmon;
+            color: darkmagenta;
+            font-size: larger;
+            letter-spacing:4px;
+            
+        }
+        I{
+            background-color:gray;
+            color: greenyellow;
+            font-size: smaller;
+            cursor: crosshair;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark my-primary">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    59
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src=" http://e-learning.bmstu.ru/moodle/pluginfile.php/7546/
+mod_folder/content/0/avatar.jpg" alt="avatar" width="150" height="150">
+            </div>
+            <div class="col-8">
+                <p>Любой текст</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Username:
+                            </td>
+                            <td>
+                                <input type="text" name="name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Pasword:
+                            </td>
+                            <td>
+                                <input type="text" name="pas">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="button" value="Submit">
+            </div>
+            <div class="col-4">
+                <table border="1px" >
+                    <thead>
+                        <th width="30">Чт</th>
+                        <th width="100">Время</th>
+                        <th width="200" bgcolor="#B7D7EC">ЧС</th>
+                        <th width="200" bgcolor="#597EA7">ЗН</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="7"> </td>
+                            <td>8:30-10:05</td>
+                        </tr>
+                        <tr>
+                            
+                            <td>10:15-11:50</td> 
+                            <td colspan="2">(сем) Элективный курс по физической культуре и спорту каф. ФВ</td>
+                        </tr>
+                        <tr>
+                            <td>12:00-13:35</td>
+                            <td colspan="2">(сем) Правоведение 533л</td>
+                        </tr>
+                        <tr>
+                            <td>13:50-15:25</td>
+                            <td colspan="2">(лек) Базы данных 218л Фомин М. М.</td>
+                        </tr>
+                        <tr>
+                            <td>15:40-17:15</td>
+                            <td>(лек) Теория вероятностей и математическая статистика 218л Горяинов В. Б.</td>
+                            <td>(лек) Правоведение 218л</td>
+                        </tr>
+                        <tr>
+                            <td>17:30-19:05</td>
+                        </tr>
+                        <tr>
+                            <td>19:10-20:45</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <pre>
+                    <i>Lorem</i> ipsum dolor <strong >sit</strong> amet consectetur,
+                                                      <q >ADvertisment</q> elit. 
+                 </pre>
+                 <p>
+                 <i>Cumque</i> <b>delectus</b> earum nisi facilis 
+                 repellendus  totam eaque enim magni ullam ratione,
+                 </p>
+                 harum illo <b>dolore</b> itaque eius. Asperiores fuga <i>laboriosam</i> sapiente iusto?
+                 <br>
+                 <code lang="c++">
+                     cout>>"he-he, it's a joke";
+                 </code>
+                 <br>
+                 <math>
+         
+                     <mi>x</mi>
+                     
+                     <mo>+</mo>
+                     
+                     <mn>3</mn>
+                     
+                     </math>
+             </body>
+             <ol> <b>Shopping</b> list</ol>
+                 <li><span style="color:red">E</span><span style="color:orange">x</span><span style="color:yellow">p</span><span style="color:green">e</span><span style="color:blue">n</span><span style="color:violet">s</span><span style="color:red">i</span><span style="color:orange">v</span><span style="color:yellow">e</span> car</li>
+                 <li><span style="color:darkorange">Big</span> villa on seaside</li>
+                 <li><span style="color:blue">Milk</span></li>
+             <button>
+                 Делете <i>паге</i>
+             </button>
+            </div>
+        </div>
+    </main>
+    <footer class="my-primary">
+        <div class="container">
+            <p class="footer-text">Footer</p>
+        </div>
+    </footer>
+</body>
+
+</html>
