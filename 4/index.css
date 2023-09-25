@@ -1,0 +1,8 @@
+table{
+    border: 2px;
+    border-style: black;
+}
+th{
+    background-color: aqua;
+    font-style: italic;
+}
