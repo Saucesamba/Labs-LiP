@@ -1,0 +1,13 @@
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+td:hover.price {
+    background-color: lightblue; 
+}
+th{
+    background-color: rgb(42, 173, 217); 
+
+}
