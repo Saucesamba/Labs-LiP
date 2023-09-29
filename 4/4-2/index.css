@@ -1,0 +1,19 @@
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+td:hover {
+    background-color: lightblue; 
+}
+th{
+    background-color: rgb(42, 173, 217); 
+
+}
+tr.selected{
+    background-color: burlywood;
+}
+tr.unselected{
+    background-color:none;
+}
