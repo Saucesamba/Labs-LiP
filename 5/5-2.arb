@@ -1,0 +1,46 @@
+def find_second_maximum(arr)
+    max1 = arr[0]
+    max2 = nil
+  
+    arr.each do |element|
+      if element > max1
+        max2 = max1
+        max1 = element
+      elsif element < max1 && (max2.nil? || element > max2)
+        max2 = element
+      end
+    end
+  
+    return max2
+  end
+
+zarp=[65000,60000,40000,72000,51000,63000,77000,85000]
+name=["Иванов", "Петров", "Савельев","Быков", "Коровин", "Молоков","Синьдзяо", "Гослинг"]
+sum=0
+zarp.each do |i|
+    sum+=i
+end
+
+sr=sum/8
+puts sr
+red=100000
+find=0
+zarp.each_with_index do |i, ind|
+    if (i-sr).abs<red
+        red=i-sr
+        find=ind 
+    end
+end
+puts
+print("Самый ровный работник: ",name[find]," ",zarp[find])
+puts
+print(name[zarp.index(zarp.max)]," ",zarp.max, " - Легендарный")
+puts
+second_max = find_second_maximum(zarp)
+print(name[zarp.index(second_max)]," ",second_max, " -Второй легендраный ")
+puts
+print(zarp.min,' ',name[zarp.index(zarp.min)], " - уволен!")
+name.delete_at(zarp.index(zarp.min))
+zarp.delete_at(zarp.index(zarp.min))
+puts
+puts "Удаление завершено"
