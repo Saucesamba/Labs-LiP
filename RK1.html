@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var ind=0
+        document.addEventListener("DOMContentLoaded", function() {
+        const form1= document.getElementById("task")
+
+        form1.addEventListener('submit', function (event) {
+        event.preventDefault(); //запрет обновления страницы
+        const inde = document.getElementById('ind').value
+        if (!isNaN(inde) && !(inde.trim() =='')){
+        
+        ind=inde.trim()
+        console.log(ind)
+        }
+        else {
+            alert("Введите нормальный индекс!")
+        }
+        });
+        });
+
+        function solveTask() {
+            
+            var arr_aInput = document.getElementById('arr_a').value;
+            
+            var arr_a = arr_aInput.split(',').map(Number);
+            
+            for (var i = 0; i < arr_a.length; i++) {
+                if (isNaN(arr_a[i])) {
+                    alert("Введите корректные числа, разделенные запятой.");
+                    return;
+                }
+            }
+
+            var pr = 1;
+
+            for (var i = 0; i < arr_a.length; i++) {
+                if (arr_a[i] % 3 === 0) {
+                    pr *= arr_a[i];
+                }
+            }
+        
+            if (pr === 1) {
+                alert("В массиве нет элементов, кратных 3.");
+                return;
+            }
+
+
+            arr_a[ind] = pr;
+
+            document.getElementById('originalArray').textContent = "Исходный массив: " + arr_aInput;
+            document.getElementById('modifiedArray').textContent = "Модифицированный массив: " + arr_a.join(', ');
+            
+        }
+    </script>
+</head>
+<body>
+    <pre>
+        Архипов Артем Викторович ИУ6-33Б
+        Вариант №4
+        Дан массив чисел arr_n. Определить произведение элементов массива кратных 3 и поместить
+        ее на место элемента с индексом k, где k – введенное значение.
+
+    </pre>
+    <h1>Ввод данных</h1>
+    <form>
+        <label for="arr_a">Введите массив чисел (через запятую):</label>
+        <input type="text" id="arr_a" value="1,2,3,4,5,6,7,8">
+        <br>
+        <button type="button" onclick="solveTask()">Решить задачу</button>
+    </form>
+    <form id="task">
+        <label for="name">Input index-> </label>
+        <input type="text" id="ind" name="ind"><br><br>
+        <input type="submit" value="Input index">
+    </form>
+    <p id="originalArray"></p>
+    <p id="modifiedArray"></p>
+    <p id="sum"></p>
+</body>
+</html>

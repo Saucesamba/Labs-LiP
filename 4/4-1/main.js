@@ -38,13 +38,24 @@ function append(name,price){
 const form = document.getElementById('form'); 
 form.addEventListener('submit', function (event) {
     event.preventDefault(); //запрет обновления страницы
-    const name = document.getElementById('name').value;
-    const price = document.getElementById('price').value;
+    const name = document.getElementById('name').value.trim();
+    const price = document.getElementById('price').value.trim();
+    const specialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+    if (isNaN(price) || price==='' || price<0) {alert("Price isn't legal")}
+    else{
+    
+    if (specialChars.test(name) || name=='') {
+        alert('error, name is wrong!')
+        return
+    }
+    else{
     append(name,price)
     appzap(name,price)
     console.log(dictionary)
     console.log(name);
     console.log(price);
+    }
+    }
 });
 
 //функция подсчёта стоимости списка продуктов
