@@ -6,5 +6,7 @@ input=gets.chomp
 b=input.to_f
 input=gets.chomp  
 e=input.to_f
-solve(a,b,e)
+mas=solve(a,b,e)
+puts "Длина кривой при точности e: #{mas[0]}, равна #{mas[2]}, кол-во итераций: #{mas[1]}"
+
 

@@ -17,5 +17,5 @@ def solve(a,b,eps)
        x_prev=x
        y_prev=y
     end
-    return "Кол-во итераций при е=#{eps}: #{iter_count}. Длина кривой: #{length}"
+    return [eps, iter_count, length]
     end

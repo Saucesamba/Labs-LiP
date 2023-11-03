@@ -1,5 +1,4 @@
-var treeContainer=document.getElementById("tree-container")
-var treebtn=document.getElementById("tree-btn")
+
 function output(node, indentLevel) {
     // Создаем отступ для текущего уровня вложенности
     const indent = "  ".repeat(indentLevel);
