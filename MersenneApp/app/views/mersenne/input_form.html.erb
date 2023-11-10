@@ -1,0 +1,6 @@
+<h1>Mersenne Calculation</h1>
+<%= form_tag('/calculate', method: 'post') do %>
+  <label for="input_n">Enter value for n:</label>
+  <%= text_field_tag 'input_n' %>
+  <%= submit_tag 'Calculate' %>
+<% end %>

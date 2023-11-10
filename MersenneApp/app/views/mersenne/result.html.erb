@@ -1,0 +1,18 @@
+<h1>Mersenne Calculation Results</h1>
+<% if @results.present? %>
+  <table>
+    <tr>
+      <th>Iteration</th>
+      <th>Mersenne Number</th>
+    </tr>
+    <% @results.each do |result| %>
+      <tr>
+        <td><%= result[:iteration] %></td>
+        <td><%= result[:mersenne_number] %></td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <p>No results to display.</p>
+<% end %>
+
