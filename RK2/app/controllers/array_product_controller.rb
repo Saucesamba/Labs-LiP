@@ -1,5 +1,7 @@
 # app/controllers/array_product_controller.rb
+# frozen_string_literal: true
 
+# Missing top-level documentation comment for class ArrayProductController.
 class ArrayProductController < ApplicationController
   def index
     # Установка значений по умолчанию для формы ввода массива
@@ -29,7 +31,7 @@ class ArrayProductController < ApplicationController
       return
     end
 
-    if not input_array.all? { |element| element.match?(/\A\d+\z/) }
+    unless input_array.all? { |element| element.match?(/\A\d+\z/) }
       flash[:error] = 'Все элементы должны быть числами!'
       redirect_to array_product_index_path
       return
@@ -44,9 +46,9 @@ class ArrayProductController < ApplicationController
       redirect_to array_product_index_path
       return
     end
-    
+
     # Вычисление произведения элементов массива, кратных 3
-    product = input_array.select { |num| num % 3 == 0 }.reduce(:*)
+    product = input_array.select { |num| (num % 3).zero? }.reduce(:*)
 
     # Помещение произведения на k-е место
     input_array[k - 1] = product
