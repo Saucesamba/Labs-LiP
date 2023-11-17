@@ -1,0 +1,31 @@
+<h1>Подсчет чисел Мерсена</h1>
+<%= form_tag(laba8_index_path, method: 'get', remote: true) do %>
+  <label for="n">Введите n: </label>
+  <%= text_field_tag :n %>
+  <%= submit_tag 'Рассчитать' %>
+<% end %>
+
+<% if flash[:alert] %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+
+<% if @mersennes.present? %>
+  <h1>Результаты</h1>
+  <p>Количество чисел Мерсена: <span id="results-count"><%= @count %></span></p>
+  <table>
+    <tr>
+      <th>p</th>
+      <th>Число Мерсена</th>
+    </tr>
+    <tbody id="results-body">
+      <% @mersennes.each do |mersenne| %>
+        <tr>
+          <td><%= mersenne[:p] %></td>
+          <td><%= mersenne[:mersenne] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

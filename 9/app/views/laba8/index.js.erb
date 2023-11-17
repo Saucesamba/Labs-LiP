@@ -1,0 +1,13 @@
+document.getElementById('results-count').innerHTML = '<%= @count %>';
+
+var tableBody = document.getElementById('results-body');
+tableBody.innerHTML = '';
+
+<% @mersennes.each do |mersenne| %>
+  var row = tableBody.insertRow(-1);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+
+  cell1.innerHTML = '<%= mersenne[:p] %>';
+  cell2.innerHTML = '<%= mersenne[:mersenne] %>';
+<% end %>
