@@ -1,0 +1,20 @@
+<h1>Результаты</h1>
+<% if @count.present? %>
+  <p>Количество чисел Мерсена: <%= @count %></p>
+  <table>
+    <tr>
+      <th>p</th>
+      <th>Число Мерсена</th>
+    </tr>
+    <% @mersennes.each do |mersenne| %>
+      <tr>
+        <td><%= mersenne[:p] %></td>
+        <td><%= mersenne[:mersenne] %></td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <p>Нет результатов для отображения.</p>
+<% end %>
+
+
