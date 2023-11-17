@@ -1,2 +1,0 @@
-module MersenneHelper
-end
