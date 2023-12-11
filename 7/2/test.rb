@@ -14,4 +14,14 @@ class TestHierarchy < Minitest::Test
     assert_instance_of(Word, digit_word_obj) 
   end
   
+  def test_word_instance
+    word = Word.new('hello')
+    assert_kind_of Word, word
+  end
+  
+  def test_digit_word_instance
+    digit_word = DigitWord.new('world')
+    assert_kind_of Word, digit_word
+    assert_kind_of DigitWord, digit_word
+  end
 end
