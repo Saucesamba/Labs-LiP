@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require_relative '5-3' 
 
-class MyProgramTest < MiniTest::Unit::TestCase
+class MyProgramTest < Minitest::Test
   def test_random
     russian_alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя '
     result = ''

@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require_relative '5-2' 
 
-class MyProgramTest < MiniTest::Unit::TestCase
+class MyProgramTest < Minitest::Test
   def test_delete
     names = ["Губин", "Архипов", "Васюков", "Донской", "Светов"]
     salaries = [5000, 5500, 4900, 5300, 5400]

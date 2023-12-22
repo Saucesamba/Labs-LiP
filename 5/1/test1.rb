@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require_relative '5-1' 
 
-class MyProgramTest < MiniTest::Unit::TestCase
+class MyProgramTest < Minitest::Test
   def test_non_digit
     assert_equal "Введите число!", func("k")
   end
